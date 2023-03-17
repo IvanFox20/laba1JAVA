@@ -4,16 +4,18 @@ public class Job
 
     private Integer hoursNum;
 
+    private String employer;
     private Integer fullSalary;
 
     Job()
     {
-        this(0,0);
+        this(0,0,"n/a");
     }
-    Job(Integer hourlyPayment,Integer hoursNum)
+    Job(Integer hourlyPayment,Integer hoursNum,String employer)
     {
         this.hourlyPayment = hourlyPayment;
         this.hoursNum = hoursNum;
+        this.employer = employer;
         fullSalaryCalculation();
     }
     public void setHourlyPayment(Integer value)
@@ -35,6 +37,15 @@ public class Job
     {
         return hoursNum;
     }
+    public void SetEmployer(String value)
+    {
+        this.employer = value;
+    }
+
+    public String getEmployer()
+    {
+        return employer;
+    }
     public Integer getFullSalary()
     {
         return fullSalary;
@@ -46,7 +57,7 @@ public class Job
 
     public String toString()
     {
-        return "Hourly payment: " + hourlyPayment + " | " + "Number of hours: " + hoursNum + " | " + "fullSalary: " + fullSalary;
+        return "Hourly payment: " + hourlyPayment + " | " + "Number of hours: " + hoursNum + " | " + "Employer: " + employer + " | " + "fullSalary: " + fullSalary;
     }
 
 
